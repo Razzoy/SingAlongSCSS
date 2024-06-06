@@ -1,0 +1,20 @@
+//Placeholders bruges til at genanvende samme css kode i flere stilarter.
+//Placehodlers er simple, så de tager ingen parameter med sig.
+//Defineres med '%' og bruges med '@extend' efterfulgt af navnet på parameteren.
+
+@use './variables' as var; 
+
+%globalFont{
+    font-family: "Orbitron", sans-serif;
+    color: var.$primaryColor;
+}
+
+%gradientBG{
+    background: var.$bgColor1;
+    background: linear-gradient(200deg, var.$bgColor1 0%, var.$bgColor2 60%, var.$bgColor3 100%);
+}
+
+%noMarPad{
+    margin: 0;
+    padding: 0;
+}

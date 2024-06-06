@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+html,
+body, hgroup button {
+  font-family: "Orbitron", sans-serif;
+  color: #fff;
+}
+
+body, hgroup button {
+  background: #291383;
+  background: linear-gradient(200deg, #291383 0%, #255d9f 60%, #00a91b 100%);
+}
+
+h1,
+h2, main figure {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+}
+
+h1 span,
+h2 span {
+  color: #00FF29;
+}
+
+hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+hgroup h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+hgroup h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+hgroup button {
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1.2rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 4rem;
+}
+
+main figure {
+  position: fixed;
+  bottom: -10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+main figure .container-figure {
+  position: relative;
+}
+main figure .container-figure img {
+  display: block;
+  width: 100vw;
+  height: auto;
+}
+main figure .container-figure span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 10;
+}/*# sourceMappingURL=main.css.map */

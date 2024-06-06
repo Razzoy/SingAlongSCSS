@@ -1,3 +1,82 @@
-@use "assets/scss/utils/_mixins.scss" as mixins;
-@use "assets/scss/utils/_placeholders.scss" as placeholders;
-@use "assets/scss/utils/_variables.scss" as variables;
+@use "./helpers/mixins" as mx;
+@use "./helpers/placeholders";
+@use "./helpers/variables" as var;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    @extend %globalFont;
+    
+}
+
+body {
+    @extend %gradientBG;
+    text-align: center;
+}
+
+
+h1,
+h2 {
+    @extend %noMarPad;
+    span {
+        color: var.$limePrimary;
+    }
+}
+
+hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    button {
+        @extend %globalFont;
+        @extend %gradientBG;
+        border: none;
+        border-radius: 1.5rem;
+        padding: 1.2rem 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0 4rem;
+    }
+}
+
+main{
+    figure{
+        @extend %noMarPad;
+        position: fixed;
+        bottom: -10%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .container-figure{
+            position: relative;
+            img{
+                display: block;
+                width: 100vw;
+                height: auto;
+            }
+            span{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100vw;
+                z-index: 10;
+            }
+        }
+    }
+}
+
