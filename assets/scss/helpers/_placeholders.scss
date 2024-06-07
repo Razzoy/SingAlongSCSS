@@ -21,7 +21,17 @@
 
 %gradientFade{
     background: var.$greenAlternative;
-    background: linear-gradient(0deg, var.$greenAlternative 0%, #00000000 100%);
+    background: linear-gradient(0deg, var.$greenAlternative 0%, var.$transparent 100%);
+}
+
+%gradientBrowseBG{
+    background: var.$bgColor1;
+    background: linear-gradient(55deg, var.$bgColor1 0%, var.$bgColor2 75%, var.$bgColor2 100%) ;
+}
+
+%gradientFavorites{
+    background: var.$favPrimary;
+    background: linear-gradient(0deg, var.$favPrimary 0%, var.$favSecondary 100%) ;
 }
 
 %noMarPad{

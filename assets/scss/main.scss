@@ -1,39 +1,30 @@
-@use "./helpers/mixins" as mx;
 @use "./helpers/placeholders";
-@use "./helpers/variables" as var;
+
+@use "./pages/landing";
+@use "./pages/browse";
+@use "./pages/album";
+@use "./pages/song";
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
-
+// GLOBAL
 html,
 body {
     @extend %noMarPad;
     @extend %globalFont;
     height: 100%;
-    overflow: hidden;
-}
 
-.container-main{
-    @extend %gradientBG;
-    padding-top: 4vh;
-    text-align: center;
-    height: 100%;
-}
-
-h1,
-h2 {
-    @extend %noMarPad;
-    span {
-        color: var.$limePrimary;
+    .container-main {
+        padding-top: 4vh;
     }
-}
 
-hgroup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4vh;
-    z-index: 15;
+    h1,
+    h2,
+    h3,
+    p {
+        @extend %noMarPad;
+    }
+
     h1 {
         font-size: 50px;
         font-weight: bold;
@@ -43,49 +34,4 @@ hgroup {
         font-size: 16px;
         font-weight: 400;
     }
-    button {
-
-        @extend %gradientButton;
-        border: none;
-        border-radius: 1.2rem;
-        height: 60px;
-        width: 220px;
-        box-shadow: 0 5px 5px 0 #00000066;
-        a{
-            @extend %globalFont;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            font-size: 22px;
-            font-weight: 500;
-        }
-    }
 }
-
-main{
-    figure{
-        @extend %noMarPad;
-        position: absolute;
-        bottom: 0%;
-        .container-figure{
-            position: relative;
-            max-height: 40vh;
-            img{
-                display: block;
-                position: relative;
-                z-index: 5;
-                width: 100vw;
-            }
-            span{
-                @extend %gradientFade;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 100%;
-                width: 100vw;
-                z-index: 10;
-            }
-        }
-    }
-}
-

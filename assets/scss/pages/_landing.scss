@@ -1,0 +1,78 @@
+@use "../helpers/mixins" as mx;
+@use "../helpers/placeholders";
+@use "../helpers/variables" as var;
+
+#landingBody {
+    overflow: hidden;
+}
+
+#landing {
+    @extend %gradientBG;
+    text-align: center;
+    height: 100%;
+
+    hgroup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4vh;
+        z-index: 15;
+
+        h1, h2{
+            span {
+                color: var.$limePrimary;
+            }
+        }
+
+
+
+        button {
+
+            @extend %gradientButton;
+            border: none;
+            border-radius: 1.2rem;
+            height: 60px;
+            width: 220px;
+            box-shadow: 0 5px 5px 0 #00000066;
+
+            a {
+                @extend %globalFont;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                font-size: 22px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    main {
+        figure {
+            @extend %noMarPad;
+            position: absolute;
+            bottom: 0%;
+
+            .container-figure {
+                position: relative;
+                max-height: 40vh;
+
+                img {
+                    display: block;
+                    position: relative;
+                    z-index: 5;
+                    width: 100vw;
+                }
+
+                span {
+                    @extend %gradientFade;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100vw;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+}

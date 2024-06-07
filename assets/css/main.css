@@ -1,93 +1,98 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
-html,
-body, hgroup button a {
+#browse hgroup form input::-moz-placeholder {
   font-family: "Orbitron", sans-serif;
-  color: #fff;
+  color: #FFF;
+}
+html,
+body, #browse hgroup form input::placeholder, #landing hgroup button a {
+  font-family: "Orbitron", sans-serif;
+  color: #FFF;
 }
 
-.container-main {
+#landing {
   background: #291383;
-  background: linear-gradient(200deg, #291383 0%, #255d9f 60%, #00a91b 100%);
+  background: linear-gradient(200deg, #291383 0%, #255D9F 60%, #00A91B 100%);
 }
 
-hgroup button {
+#landing hgroup button {
   background: #00977C;
   background: linear-gradient(60deg, #00977C 0%, #00CD50 100%);
 }
 
-main figure .container-figure span {
+#landing main figure .container-figure span {
   background: #226137;
   background: linear-gradient(0deg, #226137 0%, rgba(0, 0, 0, 0) 100%);
 }
 
+#browse {
+  background: #291383;
+  background: linear-gradient(55deg, #291383 0%, #255D9F 75%, #255D9F 100%);
+}
+
+#browse .favorites {
+  background: #1B783A;
+  background: linear-gradient(0deg, #1B783A 0%, rgba(0, 0, 0, 0.4666666667) 100%);
+}
+
 html,
-body, h1,
-h2, main figure {
+body, html h1,
+html h2,
+html h3,
+html p,
+body h1,
+body h2,
+body h3,
+body p, #browse .favorites .container-favorites figure, #landing main figure {
   margin: 0;
   padding: 0;
 }
 
-html,
-body {
-  height: 100%;
+#landingBody {
   overflow: hidden;
 }
 
-.container-main {
-  padding-top: 4vh;
+#landing {
   text-align: center;
   height: 100%;
 }
-
-h1 span,
-h2 span {
-  color: #00FF29;
-}
-
-hgroup {
+#landing hgroup {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4vh;
   z-index: 15;
 }
-hgroup h1 {
-  font-size: 50px;
-  font-weight: bold;
+#landing hgroup h1 span, #landing hgroup h2 span {
+  color: #00FF29;
 }
-hgroup h2 {
-  font-size: 16px;
-  font-weight: 400;
-}
-hgroup button {
+#landing hgroup button {
   border: none;
   border-radius: 1.2rem;
   height: 60px;
   width: 220px;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
 }
-hgroup button a {
+#landing hgroup button a {
   padding: 1rem 2rem;
   text-decoration: none;
   font-size: 22px;
   font-weight: 500;
 }
-
-main figure {
+#landing main figure {
   position: absolute;
   bottom: 0%;
 }
-main figure .container-figure {
+#landing main figure .container-figure {
   position: relative;
   max-height: 40vh;
 }
-main figure .container-figure img {
+#landing main figure .container-figure img {
   display: block;
   position: relative;
   z-index: 5;
   width: 100vw;
 }
-main figure .container-figure span {
+#landing main figure .container-figure span {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -95,4 +100,101 @@ main figure .container-figure span {
   height: 100%;
   width: 100vw;
   z-index: 10;
+}
+
+#browse hgroup {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+#browse hgroup form {
+  background-color: rgba(217, 217, 217, 0.8);
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: flex;
+  border-radius: 30px;
+  height: 40px;
+  padding-right: 5vw;
+}
+#browse hgroup form .searchButton {
+  position: relative;
+  padding: 1rem;
+  padding-left: 2rem;
+}
+#browse hgroup form .searchButton:hover {
+  background-color: rgba(103, 103, 103, 0.2);
+}
+#browse hgroup form .searchButton button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+}
+#browse hgroup form .searchButton button:hover {
+  cursor: pointer;
+}
+#browse hgroup form .searchButton img {
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  width: 40%;
+}
+#browse hgroup form input {
+  border: none;
+  border-left: 2px solid rgba(103, 103, 103, 0.2);
+  background-color: rgba(0, 0, 0, 0);
+  width: 60vw;
+}
+#browse hgroup form input::-moz-placeholder {
+  font-size: 14px;
+}
+#browse hgroup form input::placeholder {
+  font-size: 14px;
+}
+#browse .favorites {
+  padding: 0 1rem;
+}
+#browse .favorites header {
+  padding: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+#browse .favorites .container-favorites {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+#browse .favorites .container-favorites figure img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+#browse .favorites .container-favorites figure figcaption header {
+  font-size: 18px;
+}
+#browse .favorites .container-favorites figure figcaption p {
+  font-size: 15px;
+  color: #7EEB90;
+}
+
+html,
+body {
+  height: 100%;
+}
+html .container-main,
+body .container-main {
+  padding-top: 4vh;
+}
+html h1,
+body h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+html h2,
+body h2 {
+  font-size: 16px;
+  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */

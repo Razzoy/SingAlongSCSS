@@ -1,3 +1,9 @@
 //Mixins bruges til at genanvende samme css kode i flere stilarter.
-//Mixins har gerne minimum en parameter med.
+//Mixins har gerne minimum et argument med sig (bruges med $ foran argumentet).
 //Defineres med '@mixin' og bruges med '@include'.
+
+@mixin gridable($column, $fraction, $gap){
+    display: grid;
+    grid-template-columns: repeat($column, $fraction);
+    gap: $gap;
+}

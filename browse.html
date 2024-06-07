@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,63 @@
     <script src="assets/js/page.js" defer></script>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
-    
+
+<body class="bodys" id="browseBody">
+    <nav id="browse" class="container-main">
+        <!-- GLOBAL HEADER -->
+        <hgroup>
+            <form action="/search">
+                <div class="searchButton">
+                    <button type="submit"></button>
+                    <img src="assets/img/svg/SearchIcon.svg" alt="Search Icon">
+                </div>
+                <input type="search" name="query" placeholder="  Search...">
+            </form>
+            <nav id="burger"></nav>
+        </hgroup>
+        <!-- GLOBAL MAIN -->
+         <main>
+            <!-- SECTION 1 -->
+            <section class="favorites">
+                <header>
+                    <h2>Favorites</h2>
+                    <img src="assets/img/svg/Like.svg" alt="">
+                </header>
+                <div class="container-favorites">
+                    <figure>
+                        <img src="assets/img/covers/David Bowie - Aladdin Sane.png" alt="David Bowie">
+                        <figcaption>
+                            <header>
+                                <h3>David Bowie</h3>
+                            </header>
+                            <p>'Aladdin Sane'</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/covers/Ramones - Ramones.png" alt="Ramones">
+                        <figcaption>
+                            <header>
+                                <h3>Ramones</h3>
+                            </header>
+                            <p>'Ramones'</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/covers/OutKast - Stankonia.png" alt="OutKast">
+                        <figcaption>
+                            <header>
+                                <h3>OutKast</h3>
+                            </header>
+                            <p>'Stankonia'</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+            <!-- SECTION 2 -->
+             <section class="albums"></section>
+         </main>
+
+    </nav>
 </body>
+
 </html>

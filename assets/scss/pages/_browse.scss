@@ -1,0 +1,90 @@
+@use "../helpers/mixins" as mx;
+@use "../helpers/placeholders";
+@use "../helpers/variables" as var;
+
+#browse {
+    @extend %gradientBrowseBG;
+
+    // HEADER
+    hgroup {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2rem;
+        form {
+            background-color: var.$searchbarColor;
+            max-width: fit-content;
+            display: flex;
+            border-radius: 30px;
+            height: 40px;
+            padding-right: 5vw;
+            .searchButton {
+                position: relative;
+                padding: 1rem;
+                padding-left: 2rem;
+                &:hover{
+                    background-color: #67676733;
+                }
+                button {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 5;
+                    opacity: 0;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    top: 25%;
+                    left: 35%;
+                    width: 40%;
+                }
+            }
+            input{
+                border: none;
+                border-left: 2px solid #67676733;
+                background-color: var.$transparent;
+                width: 60vw;
+                &::placeholder{
+                    @extend %globalFont;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    // MAIN
+    .favorites {
+        @extend %gradientFavorites;
+        padding: 0 1rem;
+        header{
+            padding: 1rem 0;
+            display: flex;
+            gap: 0.5rem;
+        }
+        .container-favorites{
+            @include mx.gridable(3, 1fr, 1rem);
+            figure{
+                @extend %noMarPad;
+                img{
+                    display: block;
+                    width: 100%;
+                    border-radius: 10px;
+                }
+                figcaption{
+                    header{
+                        font-size: 18px;
+                    }
+                    p{
+                        font-size: 15px;
+                        color: var.$favText;
+                    }
+                }
+            }
+        }
+    }
+}
