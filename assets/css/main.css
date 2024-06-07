@@ -1,16 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 html,
-body, hgroup button {
+body, hgroup button a {
   font-family: "Orbitron", sans-serif;
   color: #fff;
 }
 
-body, hgroup button {
+.container-main {
   background: #291383;
   background: linear-gradient(200deg, #291383 0%, #255d9f 60%, #00a91b 100%);
 }
 
-h1,
+hgroup button {
+  background: #00977C;
+  background: linear-gradient(60deg, #00977C 0%, #00CD50 100%);
+}
+
+main figure .container-figure span {
+  background: #226137;
+  background: linear-gradient(0deg, #226137 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+html,
+body, h1,
 h2, main figure {
   margin: 0;
   padding: 0;
@@ -19,11 +30,13 @@ h2, main figure {
 html,
 body {
   height: 100%;
-  margin: 0;
+  overflow: hidden;
 }
 
-body {
+.container-main {
+  padding-top: 4vh;
   text-align: center;
+  height: 100%;
 }
 
 h1 span,
@@ -34,39 +47,45 @@ h2 span {
 hgroup {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  align-items: center;
+  gap: 4vh;
+  z-index: 15;
 }
 hgroup h1 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
 }
 hgroup h2 {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 hgroup button {
   border: none;
-  border-radius: 1.5rem;
-  padding: 1.2rem 2rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0 4rem;
+  border-radius: 1.2rem;
+  height: 60px;
+  width: 220px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+}
+hgroup button a {
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 main figure {
-  position: fixed;
-  bottom: -10%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  position: absolute;
+  bottom: 0%;
 }
 main figure .container-figure {
   position: relative;
+  max-height: 40vh;
 }
 main figure .container-figure img {
   display: block;
+  position: relative;
+  z-index: 5;
   width: 100vw;
-  height: auto;
 }
 main figure .container-figure span {
   position: absolute;

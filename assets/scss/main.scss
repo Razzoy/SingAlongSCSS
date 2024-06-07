@@ -7,17 +7,18 @@
 
 html,
 body {
-    height: 100%;
-    margin: 0;
+    @extend %noMarPad;
     @extend %globalFont;
-    
+    height: 100%;
+    overflow: hidden;
 }
 
-body {
+.container-main{
     @extend %gradientBG;
+    padding-top: 4vh;
     text-align: center;
+    height: 100%;
 }
-
 
 h1,
 h2 {
@@ -30,44 +31,52 @@ h2 {
 hgroup {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    align-items: center;
+    gap: 4vh;
+    z-index: 15;
     h1 {
-        font-size: 40px;
+        font-size: 50px;
         font-weight: bold;
     }
 
     h2 {
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 400;
     }
     button {
-        @extend %globalFont;
-        @extend %gradientBG;
+
+        @extend %gradientButton;
         border: none;
-        border-radius: 1.5rem;
-        padding: 1.2rem 2rem;
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin: 0 4rem;
+        border-radius: 1.2rem;
+        height: 60px;
+        width: 220px;
+        box-shadow: 0 5px 5px 0 #00000066;
+        a{
+            @extend %globalFont;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 500;
+        }
     }
 }
 
 main{
     figure{
         @extend %noMarPad;
-        position: fixed;
-        bottom: -10%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
+        position: absolute;
+        bottom: 0%;
         .container-figure{
             position: relative;
+            max-height: 40vh;
             img{
                 display: block;
+                position: relative;
+                z-index: 5;
                 width: 100vw;
-                height: auto;
             }
             span{
+                @extend %gradientFade;
                 position: absolute;
                 bottom: 0;
                 left: 0;

@@ -14,6 +14,16 @@
     background: linear-gradient(200deg, var.$bgColor1 0%, var.$bgColor2 60%, var.$bgColor3 100%);
 }
 
+%gradientButton{
+    background: var.$greenPrimary;
+    background: linear-gradient(60deg, var.$greenPrimary 0%, var.$greenSecondary 100%);
+}
+
+%gradientFade{
+    background: var.$greenAlternative;
+    background: linear-gradient(0deg, var.$greenAlternative 0%, #00000000 100%);
+}
+
 %noMarPad{
     margin: 0;
     padding: 0;
