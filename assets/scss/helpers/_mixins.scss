@@ -2,8 +2,27 @@
 //Mixins har gerne minimum et argument med sig (bruges med $ foran argumentet).
 //Defineres med '@mixin' og bruges med '@include'.
 
-@mixin gridable($column, $fraction, $gap){
+@use "../helpers/placeholders";
+@use "../helpers/_variables.scss" as var;
+
+@mixin gridable($column, $fraction, $gap) {
     display: grid;
     grid-template-columns: repeat($column, $fraction);
     gap: $gap;
+}
+
+@mixin albumImgSizing($width, $borderR) {
+    display: block;
+    width: $width;
+    border-radius: $borderR;
+}
+
+@mixin figcapFonting($hSize, $pSize){
+    h3 {
+        font-size: $hSize;
+    }
+    p {
+        font-size: $pSize;
+        color: var.$albumText;
+    }
 }

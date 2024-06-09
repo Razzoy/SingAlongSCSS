@@ -2,39 +2,50 @@
 //Placehodlers er simple, så de tager ingen parameter med sig.
 //Defineres med '%' og bruges med '@extend' efterfulgt af navnet på parameteren.
 
-@use './variables' as var; 
+@use './variables' as var;
 
-%globalFont{
+%globalFont {
     font-family: "Orbitron", sans-serif;
     color: var.$primaryColor;
 }
 
-%gradientBG{
+%gradientBG {
     background: var.$bgColor1;
     background: linear-gradient(200deg, var.$bgColor1 0%, var.$bgColor2 60%, var.$bgColor3 100%);
 }
 
-%gradientButton{
+%gradientButton {
     background: var.$greenPrimary;
     background: linear-gradient(60deg, var.$greenPrimary 0%, var.$greenSecondary 100%);
 }
 
-%gradientFade{
+%gradientFade {
     background: var.$greenAlternative;
     background: linear-gradient(0deg, var.$greenAlternative 0%, var.$transparent 100%);
 }
 
-%gradientBrowseBG{
+%gradientBrowseBG {
     background: var.$bgColor1;
-    background: linear-gradient(55deg, var.$bgColor1 0%, var.$bgColor2 75%, var.$bgColor2 100%) ;
+    background: linear-gradient(55deg, var.$bgColor1 0%, var.$bgColor2 75%, var.$bgColor2 100%);
 }
 
-%gradientFavorites{
+%gradientFavorites {
     background: var.$favPrimary;
-    background: linear-gradient(0deg, var.$favPrimary 0%, var.$favSecondary 100%) ;
+    background: linear-gradient(0deg, var.$favPrimary 0%, var.$favSecondary 100%);
 }
 
-%noMarPad{
+%noMarPad {
     margin: 0;
     padding: 0;
+}
+
+%browseHeaders {
+    display: flex;
+    gap: 0.5rem;
+    padding-left: var.$padSpacing;
+
+    h2 {
+        font-size: 25px;
+        margin: 1rem 0;
+    }
 }

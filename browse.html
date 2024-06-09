@@ -10,9 +10,23 @@
 </head>
 
 <body class="bodys" id="browseBody">
-    <nav id="browse" class="container-main">
+    <div id="browse" class="container-main">
         <!-- GLOBAL HEADER -->
-        <hgroup>
+        <hgroup id="topHeader">
+            <!-- BURGER MENU -->
+            <nav>
+                <div id="burgerMenu" class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="burgerLinks" class="links-burger">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Albums</a></li>
+                    <li><a href="album.html">Latest Album</a></li>
+                </ul>
+                
+            </nav>
             <form action="/search">
                 <div class="searchButton">
                     <button type="submit"></button>
@@ -20,16 +34,15 @@
                 </div>
                 <input type="search" name="query" placeholder="  Search...">
             </form>
-            <nav id="burger"></nav>
         </hgroup>
         <!-- GLOBAL MAIN -->
          <main>
             <!-- SECTION 1 -->
             <section class="favorites">
-                <header>
+                <hgroup>
                     <h2>Favorites</h2>
                     <img src="assets/img/svg/Like.svg" alt="">
-                </header>
+                </hgroup>
                 <div class="container-favorites">
                     <figure>
                         <img src="assets/img/covers/David Bowie - Aladdin Sane.png" alt="David Bowie">
@@ -61,10 +74,103 @@
                 </div>
             </section>
             <!-- SECTION 2 -->
-             <section class="albums"></section>
+             <section class="albums">
+                <hgroup>
+                    <h2>Albums</h2>
+                    <img src="assets/img/svg/Album.svg" alt="">
+                </hgroup>
+                <div class="container-albums">
+                    <figure>
+                        <img src="assets/img/covers/David Bowie - Aladdin Sane.png" alt="David Bowie">
+                        <figcaption>
+                            <header>
+                                <h3>David Bowie</h3>
+                            </header>
+                            <p>'Aladdin Sane'</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/covers/Elton John - Goodbye Yellow Brick Road.png" alt="Elton John">
+                        <figcaption>
+                            <header>
+                                <h3>Elton John</h3>
+                            </header>
+                            <p>'Goodbye Yellow Brick Road'</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/covers/Lady Gaga - The Fame Monster.png" alt="Lady Gaga">
+                        <figcaption>
+                            <header>
+                                <h3>Lady Gaga</h3>
+                            </header>
+                            <p>'The Fame Monster'</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/covers/Metallica - Master of Puppets.png" alt="Metallica">
+                        <figcaption>
+                            <header>
+                                <h3>Metallica</h3>
+                            </header>
+                            <p>'Master of Puppets'</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/covers/No Doubt - Tragic Kingdom.png" alt="No Doubt">
+                        <figcaption>
+                            <header>
+                                <h3>No Doubt</h3>
+                            </header>
+                            <p>'Tragic Kingdom'</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/covers/OutKast - Stankonia.png" alt="OutKast">
+                        <figcaption>
+                            <header>
+                                <h3>OutKast</h3>
+                            </header>
+                            <p>'Stankonia'</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/covers/Ramones - Ramones.png" alt="Ramones">
+                        <figcaption>
+                            <header>
+                                <h3>Ramones</h3>
+                            </header>
+                            <p>'Ramones'</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/covers/Rihanna - Anti.png" alt="Rihanna">
+                        <figcaption>
+                            <header>
+                                <h3>Rihanna</h3>
+                            </header>
+                            <p>'Anti'</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/covers/Tylor the creator - igor.png" alt="Tylor the creator">
+                        <figcaption>
+                            <header>
+                                <h3>Tylor the creator</h3>
+                            </header>
+                            <p>'Igor'</p>
+                        </figcaption>
+                    </figure>
+                </div>
+             </section>
          </main>
-
-    </nav>
+         <!-- FOOTER -->
+         <footer>
+            <div class="container-footer">
+                
+            </div>
+         </footer>
+        </div>
 </body>
 
 </html>
