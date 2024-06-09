@@ -4,5 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     burgerMenu.addEventListener('click', () => {
         burgerLinks.classList.toggle('active');
+        burgerMenu.classList.toggle('active');
     });
 });
