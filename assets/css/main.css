@@ -14,7 +14,7 @@ body, #browse #topHeader form input::placeholder, #landing hgroup button a {
   background: linear-gradient(200deg, #291383 0%, #255D9F 60%, #00A91B 100%);
 }
 
-#landing hgroup button {
+#browse nav .links-burger, #landing hgroup button {
   background: #00977C;
   background: linear-gradient(60deg, #00977C 0%, #00CD50 100%);
 }
@@ -177,7 +177,7 @@ body p, #browse nav .links-burger, #browse .favorites .container-favorites figur
   flex-direction: column;
   cursor: pointer;
   z-index: 5;
-  transition: transform 0.3s ease;
+  transition: transform 0.9s ease;
 }
 #browse nav .burger-menu span {
   width: 25px;
@@ -186,13 +186,13 @@ body p, #browse nav .links-burger, #browse .favorites .container-favorites figur
   margin: 4px 0;
 }
 #browse nav .burger-menu.active span:first-child {
-  transform: rotate(45deg) translate(1vw, 1vw);
+  transform: rotate(45deg) translate(7.8px, 7.8px);
 }
 #browse nav .burger-menu.active span:nth-child(2) {
   opacity: 0;
 }
 #browse nav .burger-menu.active span:last-child {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(7.8px, -7.8px);
 }
 #browse nav .links-burger {
   list-style: none;
@@ -204,16 +204,17 @@ body p, #browse nav .links-burger, #browse .favorites .container-favorites figur
   position: absolute;
   top: -5px;
   left: -10px;
-  border-radius: 5vw;
-  background-color: #00977C;
+  border-radius: 20px;
   z-index: 3;
 }
 #browse nav .links-burger li {
   padding: 1rem 0;
+  font-size: 1.3rem;
 }
 #browse nav .links-burger a {
   color: #FFF;
   text-decoration: none;
+  padding: 1rem 2rem;
 }
 #browse nav .active {
   display: flex;
