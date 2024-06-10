@@ -4,7 +4,7 @@
   color: #FFF;
 }
 html,
-body, #album button a, #browse #topHeader form input::placeholder, #landing hgroup button a {
+body, #album button a, #browse #topHeader form input, #browse #topHeader form input::placeholder, #landing hgroup button a {
   font-family: "Orbitron", sans-serif;
   color: #FFF;
 }
@@ -177,12 +177,17 @@ body p, #browse #topHeader nav .links-burger, #browse main .favorites .container
   border-left: 2px solid rgba(103, 103, 103, 0.2);
   background-color: rgba(0, 0, 0, 0);
   width: 60vw;
+  font-size: 18px;
+  padding-left: 0.5rem;
+}
+#browse #topHeader form input:focus {
+  outline: none;
 }
 #browse #topHeader form input::-moz-placeholder {
-  font-size: 14px;
+  font-size: 18px;
 }
 #browse #topHeader form input::placeholder {
-  font-size: 14px;
+  font-size: 18px;
 }
 #browse #topHeader nav {
   display: flex;
@@ -456,6 +461,13 @@ body p, #browse #topHeader nav .links-burger, #browse main .favorites .container
     font-size: 2rem;
   }
 }
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
 html,
 body {
   height: 100%;

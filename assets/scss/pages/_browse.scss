@@ -60,10 +60,16 @@
                 border-left: 2px solid #67676733;
                 background-color: var.$transparent;
                 width: 60vw;
-
+                @extend %globalFont;
+                font-size: 18px;
+                padding-left: 0.5rem;
+                &:focus{
+                    outline: none;
+                    
+                }
                 &::placeholder {
                     @extend %globalFont;
-                    font-size: 14px;
+                    font-size: 18px;
                 }
             }
         }
