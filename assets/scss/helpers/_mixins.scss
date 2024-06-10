@@ -11,6 +11,12 @@
     gap: $gap;
 }
 
+@mixin flexing($direction, $gap){
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
 @mixin albumImgSizing($width, $borderR) {
     display: block;
     width: $width;

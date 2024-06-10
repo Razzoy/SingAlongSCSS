@@ -27,13 +27,17 @@
 
 
         button {
-
+            position: relative;
+            z-index: 6;
             @extend %gradientButton;
             border: none;
             border-radius: 1.2rem;
             height: 60px;
             width: 220px;
-            box-shadow: 0 5px 5px 0 #00000066;
+            box-shadow: 0 4px 4px 0 var.$favSecondary;
+            &:hover{
+                box-shadow: inset 2px 2px 2px var.$favSecondary;
+            }
 
             a {
                 @extend %globalFont;
@@ -54,6 +58,7 @@
             .container-figure {
                 position: relative;
                 max-height: 40vh;
+
 
                 img {
                     display: block;
